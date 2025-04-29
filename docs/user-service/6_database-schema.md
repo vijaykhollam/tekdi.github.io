@@ -41,10 +41,8 @@ sidebar_position: 6
 
 | Column Name            | Data Type                | Description                                                           |
 | ---------------------- | ------------------------ | --------------------------------------------------------------------- |
-| attendanceCaptureImage | boolean                  | Indicates if an attendance capture image exists (True/False)          |
 | tenantId               | uuid                     | Unique identifier for the tenant associated with this record          |
 | cohortId               | uuid                     | Unique identifier for the cohort associated with this record          |
-| programId              | character varying        | Identifier for the program associated with this record                |
 | status                 | character varying        | Status of the record, such as active, completed, etc.                 |
 | parentId               | character varying        | Identifier for the parent record, if applicable                       |
 | name                   | character varying        | Name associated with this record or entity                            |
@@ -103,8 +101,6 @@ sidebar_position: 6
 | ---------------- | ------------------------ | --------------------------------------------------------------------- |
 | fieldId          | uuid                     | Unique identifier for the field                                       |
 | required         | boolean                  | Indicates whether the field is required or not                        |
-| ordering         | integer                  | Defines the order of the field in a form or list                      |
-| onlyUseInSubform | boolean                  | Indicates if the field is only used in a subform                      |
 | tenantId         | uuid                     | Unique identifier for the tenant                                      |
 | contextId        | uuid                     | Unique identifier for the context associated with the field           |
 | fieldParams      | jsonb                    | JSON data containing additional parameters for the field              |
@@ -116,7 +112,6 @@ sidebar_position: 6
 | access           | character varying        | Access level or permissions associated with the field                 |
 | render           | character varying        | Specifies how the field should be rendered or displayed               |
 | context          | character varying        | Contextual information for the field, stored as a string              |
-| groupId          | character varying        | Identifier for the group that the field belongs to                    |
 | name             | character varying        | Name of the field                                                     |
 | label            | character varying        | Label or display name for the field                                   |
 | defaultValue     | character varying        | Default value for the field                                           |
@@ -200,22 +195,18 @@ sidebar_position: 6
 | Column Name       | Data Type                | Description                                                           |
 | ----------------- | ------------------------ | --------------------------------------------------------------------- |
 | status            | USER-DEFINED             | User-defined status value associated with the record                  |
-| temporaryPassword | boolean                  | Flag indicating whether the user has a temporary password             |
 | userId            | uuid                     | Unique identifier for the user associated with the record             |
 | mobile            | character varying        | Mobile phone number associated with the user                          |
-| encryptedMobile   | character varying        | Encrypted mobile phone number of the user                             |
 | dob               | character varying        | Date of birth of the user                                             |
-| encryptedDob      | character varying        | Encrypted date of birth of the user                                   |
 | district          | character varying        | District associated with the user                                     |
 | state             | character varying        | State associated with the user                                        |
-| reason            | character varying        | Reason associated with the user                                       |
+| StatusReason            | character varying        | Reason associated with the user                                       |
 | deviceId          | character varying        | Identifier for the user's device                                      |
 | username          | character varying        | Username associated with the user                                     |
 | name              | character varying        | Full name of the user                                                 |
 | email             | character varying        | Email address of the user                                             |
 | address           | text                     | Address associated with the user                                      |
 | pincode           | character varying        | Pincode (postal code) associated with the user                        |
-| encryptedEmail    | character varying        | Encrypted email address of the user                                   |
 | createdAt         | timestamp with time zone | Timestamp indicating when the record was created                      |
 | updatedAt         | timestamp with time zone | Timestamp indicating when the record was last updated                 |
 | createdBy         | uuid                     | Unique identifier for the user or system that created the record      |
